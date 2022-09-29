@@ -13,7 +13,11 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @ExtendWith(SpringExtension.class)
-@WebMvcTest(controllers = {CounterRequestController.class, CounterRequestsServer.class})
+@WebMvcTest(controllers = {
+        CounterRequestController.class,
+        CounterRequestsServer.class
+}
+)
 class CounterRequestControllerTest {
 
     @Autowired

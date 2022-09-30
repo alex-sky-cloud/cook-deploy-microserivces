@@ -23,6 +23,9 @@ public class CounterRequestController {
     @GetMapping("/v1/request/count")
     public Long getRequestsCount() {
 
-        return counterRequestsServer.increaseCounter(counter);
+        Long increaseCounter = counterRequestsServer.increaseCounter(counter);
+
+        log.info("--Запрос--№: " + increaseCounter);
+        return increaseCounter;
     }
 }
